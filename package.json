@@ -1,0 +1,24 @@
+{
+  "name": "gulp-prac",
+  "version": "0.0.1",
+  "description": "learning how to use gulp",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gulp-prac"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Julius Alvarado",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
