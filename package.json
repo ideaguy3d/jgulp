@@ -20,5 +20,8 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "imagemin-pngquant": "^4.2.2"
   }
 }

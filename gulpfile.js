@@ -5,12 +5,22 @@ var browserSync = require('browser-sync').create();
 //var jasmine = require('gulp-jasmine-phantom');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 gulp.task('default', ['styles', 'copy-html', 'copy-images'], function() {
 	gulp.watch('sass/**/*.scss', ['styles']);
 	gulp.watch('/index.html', ['copy-html']).on('change', browserSync.reload);
 
 	browserSync.init({ server: './dist' });
+
+	return gulp.src('/img/*')
+		.pipe(imagemin({
+			progressive: true,
+			use: [pngquent()]
+		}))
+		.pipe(gulp.dest('/dist/images'));
+
 });
 
 gulp.task('dist', [
